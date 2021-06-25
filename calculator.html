@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+   <div class="calculator">
+  
+      <input type="text" id="result" placeholder="0" >
+      <div class="calculator-button">
+   <button onclick="clr()" class="calc-button is-clear" >C</button>
+   <button onclick="dis('/')" class="calc-button" >/</button>
+   <button onclick="dis('7')" class="calc-button" >7</button>
+   <button onclick="dis('8')" class="calc-button" >8</button>
+   <button onclick="dis('9')" class="calc-button" >9</button>
+   <button onclick="dis('*')" class="calc-button" >*</button>
+   <button onclick="dis('4')" class="calc-button" >4</button>
+   <button onclick="dis('5')" class="calc-button" >5</button>
+   <button onclick="dis('6')" class="calc-button" >6</button>
+   <button onclick="dis('-')" class="calc-button" >-</button>
+   <button onclick="dis('1')" class="calc-button" >1</button>
+   <button onclick="dis('2')" class="calc-button" >2</button>
+   <button onclick="dis('3')" class="calc-button" >3</button>
+   <button onclick="dis('+')" class="calc-button" >+</button>
+   <button onclick="dis('0')" class="calc-button is-zero" >0</button>
+   <button onclick="dis('.')" class="calc-button" >.</button>
+   <button onclick="solve()" class="calc-button is-equal" >=</button>
+   </div>
+   <script>
+      //function that display value
+         function dis(val)
+         {
+             document.getElementById("result").value+=val;
+         }
+           
+         //function that evaluates the digit and return result
+         function solve()
+         {
+             let x = document.getElementById("result").value;
+             let y = eval(x);
+             document.getElementById("result").value = y;
+         }
+      //function that clear the display
+         function clr()
+         {
+             document.getElementById("result").value = "";
+         }
+   </script>
+   </div>
+</body>
+</html>
